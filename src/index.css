@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url("./styles/font/Roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Dancing';
+  src: local('Dancing'), url("./styles/font/Dancing/DancingScript-Regular.ttf") format('truetype');
+}
+
+/* @font-face {
+  font-family: 'Roboto';
+  src: local('./styles/font/Roboto/Roboto-Black.ttf'),
+  local('./styles/font/Roboto/Roboto-BlackItalic.ttf'),
+  local('./styles/font/Roboto/Roboto-Bold.ttf'),
+  local('./styles/font/Roboto/Roboto-BoldItalic.ttf'),
+  local('./styles/font/Roboto/Roboto-Italic.ttf'),
+  local('./styles/font/Roboto/Roboto-Light.ttf'),
+  local('./styles/font/Roboto/Roboto-LightItalic.ttf'),
+  local('./styles/font/Roboto/Roboto-Medium.ttf'),
+  local('./styles/font/Roboto/Roboto-MediumItalic.ttf'),
+  local('./styles/font/Roboto/Roboto-Regular.ttf'),
+  local('./styles/font/Roboto/Roboto-Thin.ttf'),
+  local('./styles/font/Roboto/Roboto-ThinItalic.ttf'),
+} */
+
+/* @font-face {
+  font-family: 'Dancing';
+  src: local('./styles/font/Dancing/DancingScript-Bold.ttf'),
+  local('./styles/font/Dancing/DancingScript-Medium.ttf'),
+  local('./styles/font/Dancing/DancingScript-Regular.ttf'),
+  local('./styles/font/Dancing/DancingScript-SemiBold.ttf'),
+} */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
