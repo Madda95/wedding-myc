@@ -71,11 +71,11 @@ const SaveDate = () => {
             di prenotare il prima possibile. Per cercare di agevolarvi, abbiamo
             selezionato alcune strutture per le notti del 22 e 23 luglio, che
             trovate di seguito (vi chiediamo cortesemente di indicare al più
-            presto la struttura nel quale volete alloggiare, in quanto il numero
+            presto la struttura nella quale volete alloggiare, in quanto il numero
             di camere è limitato):
             <ul>
               <ListItem>
-                l’Hotel Roma (Via Carlo Ghega,7) che si trova a due passi dalla
+                Hotel Roma (Via Carlo Ghega,7) che si trova a due passi dalla
                 stazione dei treni e dal centro città. Il prezzo a persona è di
                 44€ a notte, con prima colazione.
               </ListItem>
@@ -98,12 +98,22 @@ const SaveDate = () => {
             Per chi preferisse organizzarsi autonomamente, vi suggeriamo di
             cercare una soluzione nelle seguenti zone:
             <ul>
-              <ListItem>
+              <ListItem style={{
+                marginBottom: '5px'
+              }}>
                 Borgo Teresiano, Città Vecchia, Viale XX Settembre, San vito,
                 Stazione. Restiamo a disposizione per qualsiasi consiglio!
               </ListItem>
             </ul>
           </Description>
+
+              <Title>
+              Transfer per la location
+              </Title>
+              <Description>
+              Il giorno del matrimonio è prevista una navetta da Trieste A/R per il luogo del matrimonio (Castello Formentini)
+              </Description>
+
         </>
       )}
 
