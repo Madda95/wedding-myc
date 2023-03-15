@@ -3,12 +3,24 @@ import styled from "styled-components";
 
 const SaveDate = () => {
   const light = window.location.search?.includes("light");
+  const ultra = window.location.search?.includes("ultra");
+  const ultraUrl = "https://forms.gle/r2SZhP5D17bHHJR99";
   const lightUrl = "https://forms.gle/r2SZhP5D17bHHJR99";
   const url = "https://forms.gle/yML4WAf9WjdSDPtu8";
   return (
     <div>
       <Title>Save the date</Title>
-      <Description>23 Luglio 2023 Ore: 14:OO</Description>
+      <Description2>
+        23 Luglio 2023{" "}
+        {ultra ? (
+          <>
+            <br />
+            Taglio della torta Ore: 22.00
+          </>
+        ) : (
+          "Ore: 14:OO"
+        )}
+      </Description2>
 
       <Title>Location</Title>
       <Description>
@@ -71,8 +83,8 @@ const SaveDate = () => {
             di prenotare il prima possibile. Per cercare di agevolarvi, abbiamo
             selezionato alcune strutture per le notti del 22 e 23 luglio, che
             trovate di seguito (vi chiediamo cortesemente di indicare al più
-            presto la struttura nella quale volete alloggiare, in quanto il numero
-            di camere è limitato):
+            presto la struttura nella quale volete alloggiare, in quanto il
+            numero di camere è limitato):
             <ul>
               <ListItem>
                 Hotel Roma (Via Carlo Ghega,7) che si trova a due passi dalla
@@ -81,12 +93,11 @@ const SaveDate = () => {
               </ListItem>
               <ListItem>
                 Residence Le terrazze (Via Filzi, 21) anche questo vicino alla
-                stazione, a due passi dal centro. Al momento hanno
-                disponibilità di 10 appartamenti matrimoniali per le notti del
-                22 e 23 Luglio al prezzo complessivo di 214€. Ci sono anche
-                alcune opzioni per appartamenti da 4 persone con 1 camera da
-                letto con il divano letto in soggiorno al prezzo complessivo di
-                323€
+                stazione, a due passi dal centro. Al momento hanno disponibilità
+                di 10 appartamenti matrimoniali per le notti del 22 e 23 Luglio
+                al prezzo complessivo di 214€. Ci sono anche alcune opzioni per
+                appartamenti da 4 persone con 1 camera da letto con il divano
+                letto in soggiorno al prezzo complessivo di 323€
               </ListItem>
               <ListItem>
                 Per chi vuole o può pernottare solo la Domenica 23 Luglio
@@ -98,31 +109,35 @@ const SaveDate = () => {
             Per chi preferisse organizzarsi autonomamente, vi suggeriamo di
             cercare una soluzione nelle seguenti zone:
             <ul>
-              <ListItem style={{
-                marginBottom: '5px'
-              }}>
+              <ListItem
+                style={{
+                  marginBottom: "5px",
+                }}
+              >
                 Borgo Teresiano, Città Vecchia, Viale XX Settembre, San vito,
                 Stazione. Restiamo a disposizione per qualsiasi consiglio!
               </ListItem>
             </ul>
           </Description>
 
-              <Title>
-              Transfer per la location
-              </Title>
-              <Description>
-              Il giorno del matrimonio è prevista una navetta da Trieste A/R per il luogo del matrimonio (Castello Formentini)
-              </Description>
-
+          <Title>Transfer per la location</Title>
+          <Description>
+            Il giorno del matrimonio è prevista una navetta da Trieste A/R per
+            il luogo del matrimonio (Castello Formentini)
+          </Description>
         </>
       )}
 
       <Title>Un' ultima cosa</Title>
       <Description>
-        Infine, chiediamo gentilmente a tutti, di compilare il form sottostante
-        per confermare la partecipazione e segnalare eventuali intolleranze e/o
-        esigenze alimentari particolari.”
-        <Button href={light ? lightUrl : url} as="a" target="_blank">
+        {light || ultra ? "Chiediamo" : "Infine, chiediamo "} gentilmente a
+        tutti, di compilare il form sottostante per confermare la partecipazione
+        e segnalare eventuali intolleranze e/o esigenze alimentari particolari.
+        <Button
+          href={light ? (ultra ? ultraUrl : lightUrl) : url}
+          as="a"
+          target="_blank"
+        >
           Accedi al form
         </Button>
       </Description>
@@ -160,7 +175,24 @@ const Description = styled.div`
   font-size: 20px;
   padding: 5px 20px;
   margin: 0 auto 30px;
-  text-align: left;
+  text-align: center;
+
+  a {
+    color: black;
+  }
+`;
+const Description2 = styled.div`
+  font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  line-height: 30px;
+  font-size: 20px;
+  padding: 5px 20px;
+  margin: 0 auto 30px;
+  text-align: center;
 
   a {
     color: black;
