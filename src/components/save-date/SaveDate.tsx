@@ -36,6 +36,20 @@ const SaveDate = () => {
           Floriano del Collio (GO)
         </a>
       </Description>
+      {light || ultra ? (
+        <>
+          <Description>
+            La vostra presenza sarà per noi il dono più bello. Ma se desiderate
+            farci un regalo, potete aiutarci a realizzare un sogno: il nostro
+            viaggio di nozze!
+            <br />
+          </Description>
+          <Description>
+            Intestatario: SANTORO LORENZO, BOER MICAELA <br />
+            IBAN: IT55X0503401753000000042057
+          </Description>
+        </>
+      ) : null}
 
       {light ? null : (
         <>
